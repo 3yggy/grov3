@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="data:,">
+    <title>Grov3 - by Ziggy</title>
+    <script src='./index.js'></script>
+</head>
+<body>
+    <div>
+        <canvas id='gameCanvas'></canvas>
+        <div id=overlay>
+            username:<input id='userName' type="text"><br>
+            password:<input id='userAuth' type="text"><br>
+            <button id='login'>login</button>
+            <button id='register'>register</button>
+            <br><hr>
+            <input id='realmId' type="text">
+            <button id='joinRealm'>join</button>
+            <button id='makeRealm'>make</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    html, body, div, canvas {
+    margin: 0;
+    padding: 0;
+}
+#overlay{
+    position: absolute;
+}
+</style>
