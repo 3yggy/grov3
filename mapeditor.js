@@ -39,7 +39,6 @@ function Mouse(evt) {
     const c = ClientToWorld(evt.clientX,evt.clientY)
     var worldX=c.x;
     var worldY=c.y;
-    //console.log(worldX,worldY);
     var tile = map[0].tiles[worldX+worldY*realmCtx.chunkSize]
     
     if(!evt.ctrlKey&&!evt.shiftKey){
@@ -60,14 +59,12 @@ function Mouse(evt) {
         }
 
         if(tile[object]!=null){
-            console.log(evt);
             if(evt.button == 0) 
             {
                 tile[object]++;
             }else{
                 tile[object]--;
             }
-            console.log(tile[object]);
         }
     }
     Draw();
