@@ -9,7 +9,13 @@ window.onload=function(){
     tiles = new Image(  )
     tiles.src = 'tiles0.png';
     New();
-    tiles.onload=Draw;
+    tiles.onload=function(){
+        if(window.location.hash){    
+            Load(window.location.hash.substring(1))
+        }
+        else
+        Draw();
+    };
     var overlay = document.getElementById('editor');
 
     function fitCanvas() {
